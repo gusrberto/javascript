@@ -1,0 +1,1 @@
+Repositório para armazenas códigos de JavaScript
