@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body {
+            background-color: rgba(57, 49, 107, 0.719);
+            color: white;
+            font: normal 18px Arial, sans-serif;
+        }
+
+        input {
+            width: 50px;
+        }
+
+        .botao {
+            width: 70px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .multado {
+            color: red;
+            font-weight: bold;
+        }
+
+        .semMulta {
+            color: rgb(0, 197, 0);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Infrações</h1>
+    Velocidade do veículo: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input class="botao" type="button" value="Verificar" onclick="calcular()">
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            var txtvel = window.document.getElementById('txtvel')
+            var res = window.document.querySelector('#resultado')
+            var vel = Number(txtvel.value)
+
+            res.innerHTML = `<p>Sua velocidade atual é de ${vel}km/h</p>`
+            if (vel > 60) {
+                res.innerHTML += `Velocidade acima da permitida na via. <span class="multado">MULTADO!</span>`
+            } else {
+                res.innerHTML += `Velocidade dentro da permitida na via. <span class="semMulta">Sem multa!</span>`
+            }
+            res.innerHTML += `<p>Dirija sempre com cuidado!</p>`
+        }
+
+    </script>
+</body>
+</html>
