@@ -15,13 +15,13 @@ function verificar() {
         var genero = '';
         if (formSex[0].checked) {
             genero = 'Homem';
-            if (idade >= 0 && idade <= 10) {
+            if (idade >= 0 && idade <= 14) {
                 // Criança
                 img.src = 'imagens/foto-bebe-m.png';
-            } else if (idade <= 21) {
+            } else if (idade <= 30) {
                 // Jovem
                 img.src = 'imagens/foto-jovem-m.png';
-            } else if (idade <= 50) {
+            } else if (idade <= 60) {
                 // Adulto
                 img.src = 'imagens/foto-adulto-m.png';
             } else {
@@ -30,13 +30,13 @@ function verificar() {
             }
         } else if (formSex[1].checked) {
             genero = 'Mulher';
-            if (idade >= 0 && idade <= 10) {
+            if (idade >= 0 && idade <= 14) {
                 // Criança
                 img.src = 'imagens/foto-bebe-f.png';
-            } else if (idade <= 21) {
+            } else if (idade <= 30) {
                 // Jovem
                 img.src = 'imagens/foto-jovem-f.png';
-            } else if (idade <= 50) {
+            } else if (idade <= 60) {
                 // Adulto
                 img.src = 'imagens/foto-adulto-f.png';
             } else {
